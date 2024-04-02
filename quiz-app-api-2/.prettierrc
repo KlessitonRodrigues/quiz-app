@@ -6,6 +6,7 @@
   "arrowParens": "avoid",
   "semi": true,
   "importOrder": ["^src/(.*)$", "^server/(.*)$", "^[./]"],
+  "importOrderParserPlugins": ["typescript", "decorators-legacy"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
   "plugins": ["@trivago/prettier-plugin-sort-imports"]
