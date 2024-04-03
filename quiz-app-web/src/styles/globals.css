@@ -21,6 +21,21 @@ body {
   background: #fff;
 }
 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #313E51;
+  font-weight: bold;
+}
+
+p {
+  color: #626C7F;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

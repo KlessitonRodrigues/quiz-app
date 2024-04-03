@@ -1,7 +1,8 @@
-import ProgressLine from 'src/lib/base/progress/progressLine';
+import ProgressLine from "src/lib/base/progress/progressLine";
 
-export const Description = (props: Props.QuizPanel) => {
+export const Description = (props: Props.QuizPanelDescription) => {
   const { question, currentCount = 0, totalCount = 0 } = props;
+
   return (
     <div className="flex flex-col w-full">
       <div className="mb-6">

@@ -1,16 +1,52 @@
-import WideButton from 'src/lib/base/buttons/WideButton';
-import Radio from 'src/lib/base/inputs/Radio';
+import { useMemo, useState } from "react";
+import WideButton from "src/lib/base/buttons/WideButton";
+import If from "src/lib/base/containers/If";
+import Radio from "src/lib/base/inputs/Radio";
 
-export const Options = () => {
+export const Options = (props: Props.QuizPanelOptions) => {
+  const {
+    options = [],
+    result = "",
+    showResult,
+    onSubmitResult,
+    onNextQuiz,
+  } = props;
+  const [selected, setSelected] = useState(-1);
+  const quizResult = options.indexOf(result);
+
+  const optButtons = useMemo(() => {
+    return options.map((option, index) => {
+      return (
+        <Radio
+          key={index}
+          index={String.fromCharCode(65 + index)}
+          label={option}
+          onClick={() => !showResult && setSelected(index)}
+          selected={index === selected}
+          correct={index === quizResult}
+          error={index !== quizResult && index === selected}
+          noColor={!showResult}
+        />
+      );
+    });
+    // eslint-disable-next-line
+  }, [options, selected, showResult]);
+
   return (
     <div className="flex-center gap-1 flex-col w-full">
-      <div className="flex flex-col gap-4 w-full">
-        <Radio index="D" label="Option 4" value="4" />
-        <Radio index="D" label="Option 4" value="4" />
-        <Radio index="D" label="Option 4" value="4" />
-        <Radio index="D" label="Option 4" value="4" />
-      </div>
-      <WideButton label="Submit Answer" />
+      <div className="flex flex-col gap-4 w-full">{optButtons}</div>
+      <If check={!showResult}>
+        <WideButton
+          label="Submit Answer"
+          onClick={() => onSubmitResult && onSubmitResult(options[selected])}
+        />
+      </If>
+      <If check={!!showResult}>
+        <WideButton
+          label="Next Quiz"
+          onClick={() => onNextQuiz && onNextQuiz()}
+        />
+      </If>
     </div>
   );
 };

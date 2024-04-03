@@ -12,6 +12,11 @@ declare namespace Props {
     iconBg?: string;
     label?: string;
     value?: string;
+    onClick?: () => void;
+    selected?: boolean;
+    error?: boolean;
+    correct?: boolean;
+    noColor?: boolean;
   };
 
   type ProgressLine = {
@@ -19,14 +24,32 @@ declare namespace Props {
   };
 
   type QuizPanel = {
+    quizzes?: Api.Quiz[];
+  };
+
+  type QuizPanelDescription = {
     question?: string;
-    options?: Radio[];
-    totalCount?: number;
     currentCount?: number;
+    totalCount?: number;
+  };
+
+  type QuizPanelOptions = {
+    result?: string;
+    options?: string[];
+    showResult?: boolean;
+    onSubmitResult?: (value: string) => void;
+    onNextQuiz?: () => void;
   };
 
   type Button = {
     label?: string;
     onClick?: () => void;
+  };
+
+  type If = {
+    check?: boolean;
+    true?: React.ReactElement;
+    false?: React.ReactElement;
+    children?: React.ReactElement;
   };
 }

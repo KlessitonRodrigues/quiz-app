@@ -3,7 +3,10 @@ const ProgressLine = (props: Props.ProgressLine) => {
 
   return (
     <div className="w-full p-0.5 bg-color7 rounded-full h-2.5 max-w-sm m-auto">
-      <div className="bg-color1 h-1.5 rounded-full" style={{ width: `${progress || 0}%` }}></div>
+      <div
+        className="bg-color1 h-1.5 rounded-full transition-all"
+        style={{ width: `${progress || 0}%` }}
+      ></div>
     </div>
   );
 };
