@@ -1,10 +1,11 @@
-import Image from "next/image";
 import WideButton from "src/lib/base/buttons/WideButton";
-
-import accessibilityIcon from "src/lib/assets/svg/fluent_accessibility-16-regular.svg";
 import Link from "next/link";
+import { PageTitle } from "../Header/PageTitle";
+import { usePathname } from "next/navigation";
 
 export const Score = () => {
+  const pathname = usePathname();
+
   return (
     <>
       <div className="flex flex-col w-full">
@@ -13,12 +14,7 @@ export const Score = () => {
       </div>
       <div className="flex-center gap-1 flex-col w-full">
         <div className="flex-center gap-2 flex-col w-full bg-color7 p-8 rounded-lg">
-          <div className="flex-center gap-1">
-            <div className="bg-color1 bg-opacity-10 p-1 rounded-lg">
-              <Image width={28} src={accessibilityIcon} alt="" />
-            </div>
-            <h1 className="text-2xl font-bold">Accessibility</h1>
-          </div>
+          <PageTitle pathname={pathname} />
           <div className=" text-color3 text-9xl">10</div>
           <p>out of 10</p>
         </div>

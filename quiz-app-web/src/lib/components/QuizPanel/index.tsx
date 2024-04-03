@@ -8,7 +8,7 @@ import If from "src/lib/base/containers/If";
 
 const QuizPanel = (props: Props.QuizPanel) => {
   const { quizzes = [] } = props;
-  const [currentQuiz, setQuiz] = useState(0);
+  const [currentQuiz, setQuiz] = useState(39);
   const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState(0);
   const quiz = quizzes[currentQuiz];
@@ -27,23 +27,23 @@ const QuizPanel = (props: Props.QuizPanel) => {
 
   return (
     <div className="flex gap-28 max-w-5xl w-full">
-      <If check={currentQuiz < quizzes.length - 1}>
+      <If check={quiz && currentQuiz < quizzes.length - 1}>
         <>
           <Description
-            question={quiz.question}
-            totalCount={quizzes.length}
+            question={quiz?.question}
+            totalCount={quizzes?.length}
             currentCount={currentQuiz}
           />
           <Options
-            result={quiz.answer}
-            options={quiz.options}
+            result={quiz?.answer}
+            options={quiz?.options}
             showResult={showResult}
             onSubmitResult={onSubmitQuiz}
             onNextQuiz={onNextQuiz}
           />
         </>
       </If>
-      <If check={currentQuiz === quizzes.length - 1}>
+      <If check={quiz && currentQuiz === quizzes.length - 1}>
         <Score />
       </If>
     </div>

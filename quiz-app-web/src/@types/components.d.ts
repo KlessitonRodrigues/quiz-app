@@ -52,4 +52,12 @@ declare namespace Props {
     false?: React.ReactElement;
     children?: React.ReactElement;
   };
+
+  type Header = {
+    pathname?: string;
+  };
+
+  type PageTitle = {
+    pathname?: string;
+  };
 }
