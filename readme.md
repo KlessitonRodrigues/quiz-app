@@ -26,11 +26,11 @@ Simple Quiz app about HTML, CSS and Javascript technologies.
 
 #### 🚀 Start Application
 
+> Remote
+
+- run "yarn start:dev"
+
 > Local
 
 - change ".env" file to use the local database uri
 - run "docker-compose up"
-
-> Remote
-
-- run "yarn start:dev"
