@@ -1,6 +1,6 @@
-## Quiz App
+# Quiz App
 
-Simple Quiz app about Web technologies
+Simple Quiz app about HTML, CSS and Javascript technologies.
 
 ### Quis App Web
 
