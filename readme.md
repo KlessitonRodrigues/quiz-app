@@ -15,7 +15,7 @@ Simple Quiz app about HTML, CSS and Javascript technologies.
 
 ### Quis App API
 
-##### 🔨 Frameworks
+#### 🔨 Frameworks
 
 - NestJS
 - MongoDB
