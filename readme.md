@@ -9,7 +9,7 @@ Simple Quiz app about HTML, CSS and Javascript technologies.
 - NextJS
 - TailwindCSS
 
-##### 🚀 Start the application
+#### 🚀 Start the application
 
 - run "yarn dev"
 
@@ -20,11 +20,11 @@ Simple Quiz app about HTML, CSS and Javascript technologies.
 - NestJS
 - MongoDB
 
-##### 📡 Endpoints
+#### 📡 Endpoints
 
 - Import the file "insomnia.json" into insomnia app to see each endpoint
 
-##### 🚀 Start the application
+#### 🚀 Start the application
 
 > Local
 
