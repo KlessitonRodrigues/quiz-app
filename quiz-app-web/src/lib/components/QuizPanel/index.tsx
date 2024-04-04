@@ -24,7 +24,6 @@ const QuizPanel = (props: Props.QuizPanel) => {
     setQuiz(currentQuiz + 1);
     setShowResult(false);
   };
-  console.log(currentQuiz, quizzes.length);
 
   return (
     <div className="flex gap-28 max-w-5xl w-full">

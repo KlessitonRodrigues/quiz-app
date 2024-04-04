@@ -30,8 +30,6 @@ export class QuizController {
   @Get()
   async quizList(@Query() query) {
     const { title, limit } = query;
-    console.log(query);
-
     const items = await this.quizService.findAll({ title }, limit);
     return items.map(toJSObject);
   }
