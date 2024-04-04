@@ -2,7 +2,7 @@
 
 Simple Quiz app about HTML, CSS and Javascript technologies.
 
-### Quis App Web
+### 🌐 Quis App Web
 
 #### 🔨 Frameworks
 
@@ -13,14 +13,14 @@ Simple Quiz app about HTML, CSS and Javascript technologies.
 
 - run "yarn dev"
 
-### Quis App API
+### 📡 Quis App API
 
 #### 🔨 Frameworks
 
 - NestJS
 - MongoDB
 
-#### 📡 Endpoints
+#### 📪 Endpoints
 
 - Import the file "insomnia.json" into insomnia app to see each endpoint
 
