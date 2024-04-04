@@ -42,7 +42,7 @@ const HomePage = () => {
               value=""
             />
           </Link>
-          <Link href="/quiz/Javascript">
+          <Link href="/quiz/javascript">
             <Radio
               icon={<Image width={28} src={JsIcon} alt="" />}
               iconBg="color5 bg-opacity-20"
@@ -51,7 +51,7 @@ const HomePage = () => {
               value=""
             />
           </Link>
-          <Link href="/quiz/Accessibility">
+          <Link href="/quiz/accessibility">
             <Radio
               icon={<Image width={28} src={AccessibilityIcon} alt="" />}
               iconBg="color1 bg-opacity-10"

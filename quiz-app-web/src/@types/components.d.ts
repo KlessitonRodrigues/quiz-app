@@ -41,6 +41,11 @@ declare namespace Props {
     onNextQuiz?: () => void;
   };
 
+  type QuizPanelScore = {
+    score?: number;
+    totalCount?: number;
+  };
+
   type Button = {
     label?: string;
     onClick?: () => void;
