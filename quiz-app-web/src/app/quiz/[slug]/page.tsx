@@ -6,10 +6,12 @@ import Header from "src/lib/components/Header";
 import QuizPanel from "src/lib/components/QuizPanel";
 import { getQuizzesByType } from "./handlers";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const QuizPage = (props: any) => {
   const { params } = props;
   const [quizzes, setQuizzes] = useState<Api.Quiz[]>([]);
+  const pathname = usePathname();
 
   useEffect(() => {
     const load = async () => {
@@ -21,7 +23,7 @@ const QuizPage = (props: any) => {
 
   return (
     <Page>
-      <Header />
+      <Header pathname={pathname} />
       <QuizPanel quizzes={quizzes} />
       <CirclesBG />
     </Page>

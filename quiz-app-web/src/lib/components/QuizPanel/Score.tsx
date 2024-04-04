@@ -1,6 +1,6 @@
 import WideButton from "src/lib/base/buttons/WideButton";
 import Link from "next/link";
-import { PageTitle } from "../Header/PageTitle";
+import { PageTitle } from "src/lib/base/text/PageTitle";
 import { usePathname } from "next/navigation";
 
 export const Score = (props: Props.QuizPanelScore) => {

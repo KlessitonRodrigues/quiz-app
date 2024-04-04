@@ -4,8 +4,9 @@ import { pageInfo } from "src/utils/constants/pages";
 
 export const PageTitle = (props: Props.PageTitle) => {
   const { pathname } = props;
-  const page = pageInfo[pathname];
-  if (!pageInfo) return <div></div>;
+
+  const page = pageInfo[pathname || ""];
+  if (!page) return <div></div>;
 
   return (
     <div className="flex-center gap-1">
