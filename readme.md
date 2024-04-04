@@ -1,36 +1,36 @@
 ## Quiz App
 
-Simle Quiz about Web technologies
+Simple Quiz app about Web technologies
 
 ### Quis App Web
 
-> 🔨 Frameworks
+#### 🔨 Frameworks
 
 - NextJS
 - TailwindCSS
 
-> 🚀 Start the application
+##### 🚀 Start the application
 
 - run "yarn dev"
 
 ### Quis App API
 
-> 🔨 Frameworks
+##### 🔨 Frameworks
 
 - NestJS
 - MongoDB
 
-> 📡 Endpoints
+##### 📡 Endpoints
 
 - Import the file "insomnia.json" into insomnia app to see each endpoint
 
-> 🚀 Start the application
+##### 🚀 Start the application
 
-#### Local
+> Local
 
 - change ".env" file to use the local database uri
 - run "docker-compose up"
 
-#### Remote
+> Remote
 
 - run "yarn start:dev"
