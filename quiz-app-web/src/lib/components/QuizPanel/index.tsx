@@ -26,7 +26,7 @@ const QuizPanel = (props: Props.QuizPanel) => {
   };
 
   return (
-    <div className="flex gap-28 max-w-5xl w-full">
+    <div className="flex flex-col gap-12 max-w-5xl w-full md:flex-row md:gap-24">
       <If check={quiz && currentQuiz < quizzes.length}>
         <>
           <Description

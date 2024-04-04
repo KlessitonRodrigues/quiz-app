@@ -14,6 +14,11 @@ export const Options = (props: Props.QuizPanelOptions) => {
   const [selected, setSelected] = useState(-1);
   const quizResult = options.indexOf(result);
 
+  const onNext = () => {
+    onNextQuiz && onNextQuiz();
+    setSelected(-1);
+  };
+
   const optButtons = useMemo(() => {
     return options.map((option, index) => {
       return (
@@ -42,10 +47,7 @@ export const Options = (props: Props.QuizPanelOptions) => {
         />
       </If>
       <If check={!!showResult}>
-        <WideButton
-          label="Next Quiz"
-          onClick={() => onNextQuiz && onNextQuiz()}
-        />
+        <WideButton label="Next Quiz" onClick={onNext} />
       </If>
     </div>
   );
