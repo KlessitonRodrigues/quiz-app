@@ -1,5 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 
+import 'src/config/env';
+
 import { AppModule } from './app.module';
 import { databaseConnect } from './config/mongodb';
 

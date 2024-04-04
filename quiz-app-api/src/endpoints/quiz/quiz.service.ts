@@ -10,8 +10,13 @@ import { Quiz, QuizSchema } from './quiz.schema';
 export class QuizService {
   private quizModel = mongoose.model('quiz', QuizSchema);
 
-  async findAll(): Promise<Quiz[]> {
-    return this.quizModel.find().exec();
+  async findAll(quiz?: Partial<Quiz>, limit?: string): Promise<Quiz[]> {
+    const { title } = quiz;
+    const findQuery = this.quizModel.find();
+
+    if (title) findQuery.find({ title });
+    if (limit) findQuery.limit(Number(limit));
+    return findQuery.exec();
   }
 
   async findOne(id: string): Promise<Quiz> {
@@ -45,9 +50,6 @@ export class QuizService {
         icon: quiz.icon,
         ...question,
       }));
-
-      console.log(questions);
-
       await this.create(questions);
     }
     return true;

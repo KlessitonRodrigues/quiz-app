@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Patch, Post, Query } from '@nestjs/common';
 
 import { toJSObject } from 'src/utils/mongo/convertObj';
 
@@ -28,8 +28,11 @@ export class QuizController {
   }
 
   @Get()
-  async quizList() {
-    const items = await this.quizService.findAll();
+  async quizList(@Query() query) {
+    const { title, limit } = query;
+    console.log(query);
+
+    const items = await this.quizService.findAll({ title }, limit);
     return items.map(toJSObject);
   }
 

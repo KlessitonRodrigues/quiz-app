@@ -1,9 +1,8 @@
 import mongoose from 'mongoose';
 
-// mongodb://mongodb-container:27017/your-database-name
-const uri = 'mongodb://mongo:27017/quiz-app';
+import { env } from './env';
 
 export const databaseConnect = async () => {
-  await mongoose.connect(uri);
-  console.log('Database connected successfully!');
+  await mongoose.connect(env.MONGODBD);
+  console.log('DATABASE CONNECTED!');
 };
