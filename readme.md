@@ -34,3 +34,4 @@ Simple Quiz app about HTML, CSS and Javascript technologies.
 
 - change ".env" file to use the local database uri
 - run "docker-compose up"
+- obs: ".env" added to review purpose
