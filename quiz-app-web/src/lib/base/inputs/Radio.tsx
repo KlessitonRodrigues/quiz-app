@@ -33,7 +33,7 @@ const Radio = (props: Props.Radio) => {
       onClick={() => onClick && onClick()}
     >
       <div className={`bg-${iconBg || color} text-${textcolor} rounded-md`}>
-        <div className="icon flex-center justify-center w-10 h-10">
+        <div className="flex-center justify-center w-10 h-10">
           <b>{icon || index}</b>
         </div>
       </div>

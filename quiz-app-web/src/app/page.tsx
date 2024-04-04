@@ -10,6 +10,7 @@ import CssIcon from "src/lib/assets/svg/fluent_paint-brush-16-regular.svg";
 import CirclesBG from "src/lib/base/background/Circles";
 import Page from "src/lib/base/containers/Page";
 import Radio from "src/lib/base/inputs/Radio";
+import Text from "src/lib/base/text/Text";
 import Header from "src/lib/components/Header";
 
 const HomePage = () => {
@@ -18,9 +19,13 @@ const HomePage = () => {
       <Header />
       <div className="flex flex-col gap-16 max-w-5xl w-full md:flex-row">
         <div className="flex flex-col gap-4 w-full">
-          <p className="text-5xl">Wellcome to the</p>
+          <p className="text-5xl">
+            <Text path="home_intro_title" />
+          </p>
           <h1 className="text-5xl">Frontend Quiz</h1>
-          <p>Pick a subject to get started</p>
+          <p>
+            <Text path="home_intro_description" />
+          </p>
         </div>
         <div className="flex flex-col gap-4 w-full">
           <Link href="/quiz/html">

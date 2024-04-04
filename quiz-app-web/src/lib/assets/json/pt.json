@@ -1,3 +1,10 @@
 {
-  "title": ""
+  "home_intro_title": "Bem-vindo ao",
+  "home_intro_description": "Escolha um assunto para começar",
+  "quiz_question_step": "Questão #count de #total",
+  "quiz_submit_button": "Enviar Resposta",
+  "quiz_next_button": "Próxima Questão",
+  "quiz_completed_title": "Quiz Concluído",
+  "quiz_score_title": "Você marcou...",
+  "quiz_score_result": "de #total"
 }

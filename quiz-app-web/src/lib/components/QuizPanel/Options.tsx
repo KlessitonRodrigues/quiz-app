@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import WideButton from "src/lib/base/buttons/WideButton";
 import If from "src/lib/base/containers/If";
 import Radio from "src/lib/base/inputs/Radio";
+import { getText } from "src/utils/i18n";
 
 export const Options = (props: Props.QuizPanelOptions) => {
   const {
@@ -42,12 +43,12 @@ export const Options = (props: Props.QuizPanelOptions) => {
       <div className="flex flex-col gap-4 w-full">{optButtons}</div>
       <If check={!showResult}>
         <WideButton
-          label="Submit Answer"
+          label={getText("quiz_submit_button")}
           onClick={() => onSubmitResult && onSubmitResult(options[selected])}
         />
       </If>
       <If check={!!showResult}>
-        <WideButton label="Next Quiz" onClick={onNext} />
+        <WideButton label={getText("quiz_next_button")} onClick={onNext} />
       </If>
     </div>
   );

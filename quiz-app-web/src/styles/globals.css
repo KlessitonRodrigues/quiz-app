@@ -37,6 +37,16 @@ p {
 }
 
 @layer utilities {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
   .text-balance {
     text-wrap: balance;
   }
@@ -70,17 +80,7 @@ p {
     }
   }
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-
-    to {
-      opacity: 1;
-    }
-  }
-
-  .fade-up {
+  .fade-in {
     animation: fadeIn 0.3s ease-in-out;
   }
 }

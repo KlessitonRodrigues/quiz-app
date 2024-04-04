@@ -65,4 +65,9 @@ declare namespace Props {
   type PageTitle = {
     pathname?: string;
   };
+
+  type Text = {
+    path: string;
+    replace?: Utils.TextReplace;
+  };
 }

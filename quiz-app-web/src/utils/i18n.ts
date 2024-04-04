@@ -24,3 +24,9 @@ export const getText = (path: string) => {
   if (lang === "pt") return PTText[path] || "NO_TEXT";
   return ENText[path] || "NO_TEXT";
 };
+
+export const replaceText = (text: string, replace: Utils.TextReplace) => {
+  if (!replace) return;
+  const regex = new RegExp(Object.keys(replace).join("|"), "g");
+  return text.replace(regex, (match) => String(replace[match]));
+};
