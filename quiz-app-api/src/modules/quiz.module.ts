@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 
-import { QuizService } from './quiz.service';
+import { QuizService } from 'src/services/quiz.service';
 
 @Module({
   providers: [QuizService],

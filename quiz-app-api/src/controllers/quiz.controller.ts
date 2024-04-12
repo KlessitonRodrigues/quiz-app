@@ -1,8 +1,7 @@
 import { Body, Controller, Delete, Get, Param, Patch, Post, Query } from '@nestjs/common';
 
+import { QuizService } from 'src/services/quiz.service';
 import { toJSObject } from 'src/utils/mongo/convertObj';
-
-import { QuizService } from './quiz.service';
 
 @Controller('quiz')
 export class QuizController {

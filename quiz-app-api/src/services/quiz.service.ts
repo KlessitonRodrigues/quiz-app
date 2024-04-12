@@ -2,9 +2,8 @@ import { Injectable } from '@nestjs/common';
 import { readFileSync } from 'fs';
 import mongoose from 'mongoose';
 
+import { Quiz, QuizSchema } from 'src/schemas/quiz.schema';
 import { toDocument } from 'src/utils/mongo/convertObj';
-
-import { Quiz, QuizSchema } from './quiz.schema';
 
 @Injectable()
 export class QuizService {

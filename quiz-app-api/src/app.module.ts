@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 
-import { QuizController } from './endpoints/quiz/quiz.controller';
-import { QuizModule } from './endpoints/quiz/quiz.module';
-import { QuizService } from './endpoints/quiz/quiz.service';
+import { QuizController } from './controllers/quiz.controller';
+import { QuizModule } from './modules/quiz.module';
+import { QuizService } from './services/quiz.service';
 
 @Module({
   imports: [QuizModule],
